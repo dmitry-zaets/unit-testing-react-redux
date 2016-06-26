@@ -1,0 +1,25 @@
+const middlewares = [thunk];
+const mockStore = configureStore(middlewares);
+const store = mockStore({});
+
+store.dispatch(actions.create()).then(function() {
+
+  expect(store.getActions()[0])
+    .toEqual(actions.createStart());
+  expect(store.getActions()[1])
+    .toEqual(actions.createMessageStart());
+  expect(store.getActions()[2])
+    .toEqual(actions.createMessageFinish());
+  expect(store.getActions()[3])
+    .toEqual(actions.fetchMessages());
+  expect(store.getActions()[4])
+    .toEqual(actions.updateListing());
+  expect(store.getActions()[5])
+    .toEqual(actions.createFinish());
+  expect(store.getActions()[6])
+    .toEqual(actions.showNotifications('Done'));
+  expect(store.getActions()[7])
+    .toEqual(actions.unlock());
+
+  done();
+});

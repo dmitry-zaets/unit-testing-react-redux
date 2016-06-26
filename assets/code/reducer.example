@@ -1,0 +1,37 @@
+import { fromJS } from 'immutable';
+import { types } from './02-actionCreators';
+
+var initialState = {
+  booking: {},
+  isFetching: false
+};
+
+function bookingReducer(state = initialState, action) {
+  switch (action.type) {
+    case 'UPDATE_BOOKING':
+      return Object.assign({}, state, {
+        booking: action.data
+      });
+    default:
+      return state
+  }
+}
+
+describe('when action is UPDATE_BOOKING', () => {
+  it('should set booking from data', () => {
+
+    const result = testReducer(
+      inputState,
+      {
+        type: 'UPDATE_BOOKING',
+        data: { }
+      }
+    );
+
+    expect(result.booking).toBe(action.data);
+  });
+});
+
+
+
+

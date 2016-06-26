@@ -1,0 +1,14 @@
+import expect from 'expect';
+
+function notMatchedAction(testReducer) {
+  describe('when action type', () => {
+    describe('match not found', () => {
+      const inputState = { key: 'value' };
+
+      it('should return passed state', () => {
+        const result = testReducer(inputState, { type: 'not_matched' });
+        expect(result).toBe(inputState);
+      });
+    });
+  });
+}

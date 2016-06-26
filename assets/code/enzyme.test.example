@@ -1,0 +1,19 @@
+describe('when isAdmin is false', () => {
+  it('not renders changeEmail checkbox', () => {
+    const wrapper = shallow(
+      <UserProfile initialValues={initialValues}
+        handleChange={()=>{}} isAdmin={false} />
+    );
+    expect(wrapper.find({ name: 'changeEmail' }).length).toEqual(0);
+  });
+});
+
+describe('when isAdmin is true', () => {
+  it('renders changeEmail checkbox', () => {
+    const wrapper = shallow(
+      <UserProfile initialValues={initialValues}
+        handleChange={()=>{}} isAdmin={true} />
+    );
+    expect(wrapper.find({ name: 'changeEmail' }).length).toEqual(1);
+  });
+});

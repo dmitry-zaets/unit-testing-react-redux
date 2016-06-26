@@ -1,0 +1,25 @@
+describe('get', () => {
+  describe('when key in not present in collection', () => {
+    it('should return [key]', () => {
+      const key = 'not-present-key';
+      expect(() => localize.get(key));
+      const result = localize.get(key);
+      expect(result).toBe(`[${key}]`);
+    });
+  });
+
+  describe('when key in present in collection', () => {
+    it('should return localized value', () => {
+      const result = localize.get('key-for-test');
+      expect(result).toBe('Test Value');
+    });
+  });
+
+  describe('when key is no present in current collection', () => {
+    it('should return localized value from english collection', () => {
+      localize.setCulture('it');
+      const result = localize.get('key-for-test');
+      expect(result).toBe('Test Value');
+    });
+  });
+}); 

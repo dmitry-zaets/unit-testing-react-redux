@@ -1,0 +1,50 @@
+import { fromJS } from 'immutable';
+
+var types = {
+  fetch: 'BOOKING_FETCH'
+};
+
+
+
+
+
+
+
+function fetch(data) {
+  return {
+    type: types.fetch,
+    data: data
+  };
+}
+
+var api = {};
+
+var createTypes = {
+  start: 'BOOKING_CREATE_START',
+  finish: 'BOOKING_CREATE_FINISH',
+  end: 'BOOKING_CREATE_FAIL'
+};
+
+function createStart() {
+  return {
+    type: createTypes.start
+  };
+}
+
+
+
+
+
+function create() {
+  return function(dispatch) {
+    dispatch(createStart());
+    return getBooking().then(function(data) {
+        dispatch(createFinish(data));
+      }, function(err) {
+        dispatch(createFail(err));
+      });
+  };
+}
+
+
+

@@ -1,0 +1,19 @@
+describe('ToDoList', () => {
+  it('renders correctly', () => {
+    // setup
+    var items = [/* ... */]
+
+    // render
+    shallowRenderer.render(<ToDoList items={items} />);
+    var output = shallowRenderer.getRenderOutput();
+
+    // assert
+    expect(output.type).to.equal('div');
+    expect(output.props.className).to.equal('row row-space-2');
+    expect(output.props.children[0].type).to.equal('div');
+    expect(output.props.children[0].props.className)
+      .to.equal('todo-item col-sm-6');
+    expect(output.props.children[0].props.children[0].props.children)
+      .to.equal(items[0].title);
+  });
+});

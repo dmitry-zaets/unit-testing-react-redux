@@ -1,0 +1,6 @@
+expect(actions.create()).toDispatchActions([
+    actions.createStart(),
+    actions.message(),
+    actions.createFinish(),
+    actions.notification()
+], done);

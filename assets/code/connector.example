@@ -1,0 +1,23 @@
+function mapStateToProps(state) {
+  return {
+    name: state.user.name,
+    age: state.user.age
+  };
+};
+
+function mapDispathToProps(dispatch) {
+  return {
+    updateAge: function (age) {
+      return dispatch(
+        userActions.updateAge(age)
+      );
+    }
+  };
+};
+
+const CurrentUserInfo = connect(
+  mapStateToProps,
+  mapDispathToProps
+)(UserInfo);
+
+export default CurrentUserInfo;

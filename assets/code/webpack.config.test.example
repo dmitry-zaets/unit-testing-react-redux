@@ -1,0 +1,14 @@
+...
+config.module.loaders = [
+  { test: /\.css$/, loader: 'ignore-loader' },
+  { test: /\.scss$/, loader: 'ignore-loader' },
+  { test: /\.less$/, loader: 'ignore-loader' },
+  { test: /\.(woff|ttf|otf|eot)$/, loader: 'ignore-loader' },
+  { test: /\.(svg|svg\?embed)$/, loader: 'ignore-loader' },
+  { test: /\.(png|jpg)$/, loader: 'ignore-loader' },
+  { test: /\.json$/, loader: 'json-loader' },
+  { test: /whatwg-fetch\.js$/, loader: 'ignore-loader' },
+  { test: /\.(js)$/, loaders: ['babel'], exclude: [/node_modules/]
+  },
+];
+...
