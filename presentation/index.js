@@ -805,7 +805,7 @@ export default class Presentation extends React.Component {
               What is not important?
             </Heading>
             <List>
-              <Appear><ListItem>Which framework you are using</ListItem></Appear>
+              <Appear><ListItem>The framework which you use</ListItem></Appear>
               <Appear><ListItem>Testing of all parts</ListItem></Appear>
               <Appear><ListItem>Percentage of the coverage</ListItem></Appear>
             </List>
