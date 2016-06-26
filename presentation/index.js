@@ -634,7 +634,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading size={1} fit caps lineHeight={1}>
-              Is React components testing is useful?
+              Is React components testing useful?
             </Heading>
           </Slide>
 
