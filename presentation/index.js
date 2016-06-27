@@ -818,7 +818,7 @@ export default class Presentation extends React.Component {
             <List>
               <Appear><ListItem>The framework which you use</ListItem></Appear>
               <Appear><ListItem>Testing of all parts</ListItem></Appear>
-              <Appear><ListItem>Percentage of the coverage</ListItem></Appear>
+              <Appear><ListItem>100% code coverage</ListItem></Appear>
             </List>
           </Slide>
 
