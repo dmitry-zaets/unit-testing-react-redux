@@ -458,7 +458,7 @@ export default class Presentation extends React.Component {
               Webpack bundling is slow
             </Heading>
             <Heading size={4} lineHeight={1} textColor="red">
-              180s Avarage
+              180s Average
             </Heading>
           </Slide>
 
@@ -493,7 +493,7 @@ export default class Presentation extends React.Component {
               2x Boost as result
             </Heading>
             <Heading size={4} lineHeight={1} textColor="green">
-              90s Avarage
+              90s Average
             </Heading>
           </Slide>
 
@@ -592,7 +592,7 @@ export default class Presentation extends React.Component {
               Finally
             </Heading>
             <Heading size={1} fit caps lineHeight={1}>
-              We can start testing of React Components
+              We can start to test React Components
             </Heading>
           </Slide>
 
@@ -760,7 +760,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading size={1} fit caps lineHeight={1}>
-              Fluent Assetions for
+              Fluent Assertions for
             </Heading>
             <List>
               <ListItem>chai</ListItem>
