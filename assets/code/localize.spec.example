@@ -2,7 +2,6 @@ describe('get', () => {
   describe('when key in not present in collection', () => {
     it('should return [key]', () => {
       const key = 'not-present-key';
-      expect(() => localize.get(key));
       const result = localize.get(key);
       expect(result).toBe(`[${key}]`);
     });

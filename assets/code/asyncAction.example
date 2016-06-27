@@ -1,0 +1,10 @@
+function create() {
+  return function(dispatch) {
+    dispatch(createStart());
+    return getBooking().then(function(data) {
+        dispatch(createFinish(data));
+      }, function(err) {
+        dispatch(createFail(err));
+      });
+  };
+}

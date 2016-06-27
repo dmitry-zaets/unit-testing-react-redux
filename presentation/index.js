@@ -647,9 +647,20 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-           <Slide notes="We was using async actions and tests was looking like this">
+          <Slide notes="We was using async actions and tests was looking like this">
              <Heading size={1} fit caps lineHeight={1}>
               Async Action Creators
+            </Heading>
+            <CodePane bgColor="primary" textSize={"1.2rem"}
+              lang="js"
+              source={require("raw!../assets/code/asyncAction.example")}
+              margin="20px auto"
+            />
+          </Slide>
+
+          <Slide notes="We was using async actions and tests was looking like this">
+             <Heading size={1} fit caps lineHeight={1}>
+              Tests for Async Action Creators
             </Heading>
             <CodePane bgColor="primary" textSize={"1.2rem"}
               lang="js"
