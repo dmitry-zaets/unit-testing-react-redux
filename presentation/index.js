@@ -3,7 +3,6 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  Appear,
   CodePane,
   Deck,
   Heading,
@@ -346,7 +345,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading size={2} caps lineHeight={1}>
-              Any other code
+              Business logic
             </Heading>
             <CodePane bgColor="primary"
               lang="js"
@@ -771,7 +770,7 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide >
+          <Slide>
             <Heading size={1} fit lineHeight={1}>
               redux-actions-assertions
             </Heading>
@@ -798,16 +797,24 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading size={1} fit caps lineHeight={1}>
+              What is required in testing?
+            </Heading>
+            <List>
+              <ListItem>Involve all developers</ListItem>
+              <ListItem>Run tests on CI</ListItem>
+              <ListItem>Simplify way of testing by using utils and tools</ListItem>
+            </List>
+          </Slide>
+
+          <Slide>
+            <Heading size={1} fit caps lineHeight={1}>
               What is important in testing?
             </Heading>
             <List>
-              <Appear><ListItem>Choose the right time to start</ListItem></Appear>
-              <Appear><ListItem>Involve all developers</ListItem></Appear>
-              <Appear><ListItem>Run tests on CI</ListItem></Appear>
-              <Appear><ListItem>Avoid testing of experimental parts</ListItem></Appear>
-              <Appear><ListItem>Simplify way of testing by using utils and tools</ListItem></Appear>
-              <Appear><ListItem>Make test execution fast and comfortable</ListItem></Appear>
-              <Appear><ListItem>Understand where tests are not needed</ListItem></Appear>
+              <ListItem>Choose the right time to start</ListItem>
+              <ListItem>Avoid testing of experimental parts</ListItem>
+              <ListItem>Make test execution fast and comfortable</ListItem>
+              <ListItem>Understand where tests are not needed</ListItem>
             </List>
           </Slide>
 
@@ -816,9 +823,9 @@ export default class Presentation extends React.Component {
               What is not important?
             </Heading>
             <List>
-              <Appear><ListItem>The framework which you use</ListItem></Appear>
-              <Appear><ListItem>Testing of all parts</ListItem></Appear>
-              <Appear><ListItem>100% code coverage</ListItem></Appear>
+              <ListItem>The framework which you use</ListItem>
+              <ListItem>Testing of all parts</ListItem>
+              <ListItem>100% code coverage</ListItem>
             </List>
           </Slide>
 
